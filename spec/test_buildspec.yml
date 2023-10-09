@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14
+    commands:
+      - echo Installing dependencies...
+      - npm install --save
+  build:
+    commands:
+      - echo Running tests...
+      - npm run test
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: './dist'
